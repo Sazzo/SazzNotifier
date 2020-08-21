@@ -8,6 +8,7 @@ module.exports.SazzNotifier = class SazzNotifier extends Client {
     this.token = token
     this.prefix = options.prefix
     this.commands = new Collection()
+    this.aliases = new Collection()
   }
 
   async start () {
@@ -16,7 +17,7 @@ module.exports.SazzNotifier = class SazzNotifier extends Client {
     await this.loadListeners()
     await connect()
     const RSS = new RSSFeed(this)
-    // RSS.listen(this)
+    RSS.listen(this)
     console.log('Loaded Listeners.')
     await this.login(this.token)
       .then(() => console.log('Logged.'))

@@ -9,12 +9,11 @@ module.exports.RSSFeed = class RSSFeed {
 
     async listen(client) {
        feeder.add({
-           url: 'https://www.crunchyroll.com/rss/anime',
-           refresh: 15000
+           url: 'https://cors-anywhere.herokuapp.com/https://www.crunchyroll.com/rss/anime',
+           refresh: 20000
        })
        feeder.on('new-item', async function(item) {
         try {
-            const testSubtitleLang = item['crunchyroll:subtitlelanguages']
             const animeTitle = item['crunchyroll:seriestitle']['#']
             const animeEpisode = item['crunchyroll:episodenumber']['#']
             const anime = await Anime.findById(animeTitle)
@@ -41,7 +40,6 @@ module.exports.RSSFeed = class RSSFeed {
                 toSend.send(`It looks like a new episode of ${anime._id} just came out! Time to watch! ${anime.rss}`)
             });
         }
-        console.log(anime.lastEpisode)
         } catch(e) {
             if(e.message.includes('#')) return;
             if(e.message.includes('duplicate')) return;

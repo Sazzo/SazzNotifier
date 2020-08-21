@@ -8,7 +8,7 @@ module.exports = class Message {
       if (!message.content.startsWith(this.client.prefix)) return
       const args = message.content.slice(this.client.prefix.length).trim().split(/ +/g)
       const command = args.shift().toLowerCase()
-      const fancyCommand = this.client.commands.get(command)
+      const fancyCommand = this.client.commands.get(command) || this.client.commands.get(this.client.aliases.get(command))
       const requiredPermissions = fancyCommand.requiredPermissions
       if(message.channel.type === 'dm') return message.reply('Você não pode executar comandos na DM.')
       if (fancyCommand.dev === true) {

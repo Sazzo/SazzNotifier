@@ -4,7 +4,7 @@ module.exports = class Unsubscribe extends Command {
   constructor (client) {
     super(client, {
       name: 'unsub',
-      aliases: [],
+      aliases: ["unsubscribe"],
       requiredPermissions: null,
       dev: false
     })
@@ -12,6 +12,7 @@ module.exports = class Unsubscribe extends Command {
 
   async run ({ message, args }) {
     const specificAnime = args.slice(0).join(' ')
+    if(!specificAnime) return message.reply("You need to specify an anime name.")
     const anime = await Anime.findById(specificAnime)
     if(!anime) return message.reply("It looks like I didn't find this anime, remember, always use the exact name that is on Crunchyroll.")
     const toRemove = anime.users.indexOf(message.author.id)
