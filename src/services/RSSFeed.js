@@ -10,7 +10,7 @@ module.exports.RSSFeed = class RSSFeed {
     async listen(client) {
        feeder.add({
            url: 'http://feeds.feedburner.com/crunchyroll/rss/anime',
-           refresh: 25000
+           refresh: 20000
        })
        feeder.on('new-item', async function(item) {
         try {
