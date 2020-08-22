@@ -3,6 +3,6 @@ module.exports = class ready {
       this.client = client
     }
     async run() {
-        this.client.user.setActivity(`good night | sn!help | V.${require('../../package.json').version}`)
+        this.client.user.setActivity(`good night | sn!help | V.${require('../util/updates.json')[0].version}`)
     }
 }

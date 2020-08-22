@@ -8,9 +8,10 @@ module.exports = class Ping extends Command {
       requiredPermissions: null,
       dev: false
     })
+    this.client = client
   }
 
   async run ({ message }) {
-    message.reply('Pong!')
+    message.reply(`Pong! ${this.client.ws.ping}ms `)
   }
 }

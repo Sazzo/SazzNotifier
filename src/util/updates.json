@@ -1,0 +1,20 @@
+[
+{
+    "version":"1.0.1",
+    "date":"08/21/2020",
+    "author":"sazz#0002",
+    "changes": [
+        "Add changelog command.\n",
+        "Make the ping command sweeter.\n",
+        "Improvements in the notification message.\n"
+    ]
+},
+{
+    "version":"1.0.0",
+    "date":"08/21/2020",
+    "author":"sazz#0002",
+    "changes": [
+        "Release!"
+    ]
+}
+]
