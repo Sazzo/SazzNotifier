@@ -1,10 +1,20 @@
 [
 {
+    "version":"1.0.2",
+    "date":"08/22/2020",
+    "author":"sazz#0002",
+    "changes":[
+        "Added Subscription List command.\n",
+        "Added invite command.\n",
+        "**Ratelimited by Crunchyroll AGAIN! I'm using something from a third party now (it takes the same data, but it's slower), probably tomorrow we should go back to normal so that Cloudflare rests a little.**"
+    ]
+},
+{
     "version":"1.0.1",
     "date":"08/21/2020",
     "author":"sazz#0002",
     "changes": [
-        "Add changelog command.\n",
+        "Added changelog command.\n",
         "Make the ping command sweeter.\n",
         "Improvements in the notification message.\n"
     ]

@@ -9,8 +9,8 @@ module.exports.RSSFeed = class RSSFeed {
 
     async listen(client) {
        feeder.add({
-           url: 'https://cors-anywhere.herokuapp.com/https://www.crunchyroll.com/rss/anime',
-           refresh: 20000
+           url: 'http://feeds.feedburner.com/crunchyroll/rss/anime',
+           refresh: 25000
        })
        feeder.on('new-item', async function(item) {
         try {

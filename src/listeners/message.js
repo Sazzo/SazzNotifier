@@ -1,3 +1,4 @@
+const { Users } = require("../models/User")
 module.exports = class Message {
     constructor (client) {
       this.client = client
@@ -11,6 +12,15 @@ module.exports = class Message {
       const fancyCommand = this.client.commands.get(command) || this.client.commands.get(this.client.aliases.get(command))
       const requiredPermissions = fancyCommand.requiredPermissions
       if(message.channel.type === 'dm') return message.reply('Você não pode executar comandos na DM.')
+      const user = await Users.findById(message.author.id)
+      if(!user) {
+        const newUser = new Users({
+          _id: message.author.id,
+          subs: [],
+          donator: false
+        })
+        newUser.save()
+      }
       if (fancyCommand.dev === true) {
         if (message.author.id !== process.env.BOT_OWNER_ID) {
           return message.reply('You do not have the required permissions to use this command.')
