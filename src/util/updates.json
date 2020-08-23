@@ -5,7 +5,7 @@
     "author":"sazz#0002",
     "changes":[
         "Added Subscription List command.\n",
-        "**Ratelimited by Crunchyroll AGAIN! I'm using something from a third party now (it takes the same data, but it's slower), probably tomorrow we should go back to normal so that Cloudflare rests a little.**"
+        "~~Ratelimited by Crunchyroll AGAIN! I'm using something from a third party now (it takes the same data, but it's slower), probably tomorrow we should go back to normal so that Cloudflare rests a little.~~ Back to the normal."
     ]
 },
 {
