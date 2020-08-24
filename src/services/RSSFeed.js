@@ -37,6 +37,7 @@ module.exports.RSSFeed = class RSSFeed {
             anime.save()
             anime.users.forEach(user => {
                 const toSend = client.users.cache.get(user)
+                console.log(`Novo episódio de ${anime._id}! Enviando DM para ${toSend.username}`)
                 toSend.send(`It looks like a new episode of ${anime._id} just came out! Time to watch! ${anime.rss}\nIf you no longer want to receive notifications for this anime, use \`sn!unsubscribe ${anime._id} (or sn!unsub)\`.`)
             });
         }
