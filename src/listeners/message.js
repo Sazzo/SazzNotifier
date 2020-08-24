@@ -1,4 +1,5 @@
 const { Users } = require("../models/User")
+const { Guild } = require("../models/Guild")
 module.exports = class Message {
     constructor (client) {
       this.client = client
@@ -13,6 +14,7 @@ module.exports = class Message {
       const requiredPermissions = fancyCommand.requiredPermissions
       if(message.channel.type === 'dm') return message.reply('Você não pode executar comandos na DM.')
       const user = await Users.findById(message.author.id)
+      const guild = await Guild.findById(message.guild.id)
       if(!user) {
         const newUser = new Users({
           _id: message.author.id,
@@ -20,6 +22,17 @@ module.exports = class Message {
           donator: false
         })
         newUser.save()
+      }
+      console.log("aaa")
+      if(!guild) {
+        const newGuild = new Guild({
+          _id: message.guild.id,
+          premiumGuild: false,
+          channelMode: false,
+          channelModeID: null,
+          partner: false
+        })
+        newGuild.save()
       }
       if (fancyCommand.dev === true) {
         if (message.author.id !== process.env.BOT_OWNER_ID) {

@@ -4,8 +4,18 @@
     "date":"08/22/2020",
     "author":"sazz#0002",
     "changes":[
-        "Added Subscription List command.\n",
+        "Added Subscription List command.",
         "~~Ratelimited by Crunchyroll AGAIN! I'm using something from a third party now (it takes the same data, but it's slower), probably tomorrow we should go back to normal so that Cloudflare rests a little.~~ Back to the normal."
+    ]
+},
+{
+    "version":"1.0.2.1",
+    "author":"sazz#0002",
+    "date":"08/23/2020",
+    "changes":[
+        "Stability improvements (NO CLOUDFLARE! YOU WILL NOT BAN ME FOR RATELIMIT)",
+        "A small change in the code of changelog command.",
+        "Now, no database conflicts because of updates!"
     ]
 },
 {
@@ -13,9 +23,9 @@
     "date":"08/21/2020",
     "author":"sazz#0002",
     "changes": [
-        "Added changelog command.\n",
-        "Make the ping command sweeter.\n",
-        "Improvements in the notification message.\n"
+        "Added changelog command.",
+        "Make the ping command sweeter.",
+        "Improvements in the notification message."
     ]
 },
 {

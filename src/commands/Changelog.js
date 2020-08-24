@@ -11,6 +11,6 @@ module.exports = class Changelog extends Command {
   }
 
   async run ({ message }) {
-    message.channel.send(`Last update:\n*${Updates[0].version} (${Updates[0].date})*\n**Author**: *${Updates[0].author}*\n**Changes:\n**${Updates[0].changes.toString().split(",").join("")}`)
+    message.channel.send(`Last update:\n*${Updates[0].version} (${Updates[0].date})*\n**Author**: *${Updates[0].author}*\n**Changes:\n**${Updates[0].changes.toString().split(",").join("\n")}`)
   }
 }
