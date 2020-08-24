@@ -21,15 +21,15 @@ module.exports = class Unsubscribe extends Command {
     const toRemove = anime.users.indexOf(message.author.id)
     const toRemoveInUser = user.subs.indexOf(specificAnime)
     if(toRemoveInUser > -1 || toRemove > -1) {
+       // TODO Rewrite this?
       if(toRemoveInUser > -1) {
-        // TEMP
         user.subs.splice(toRemoveInUser, 1)
+        user.save()
       }
       if(toRemove > -1) {
         anime.users.splice(toRemove, 1)
         anime.save()
       }
-      user.save()
       message.reply(`Now you will no longer receive new notifications from ${anime._id}`)
     } else {
       message.reply('It looks like you are not subscribed to receive new notifications for this anime.')
