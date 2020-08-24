@@ -23,7 +23,6 @@ module.exports = class Message {
         })
         newUser.save()
       }
-      console.log("aaa")
       if(!guild) {
         const newGuild = new Guild({
           _id: message.guild.id,
