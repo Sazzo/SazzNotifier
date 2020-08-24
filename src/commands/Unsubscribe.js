@@ -21,7 +21,10 @@ module.exports = class Unsubscribe extends Command {
     const toRemove = anime.users.indexOf(message.author.id)
     const toRemoveInUser = user.subs.indexOf(specificAnime)
     if(toRemoveInUser > -1 || toRemove > -1) {
-      user.subs.splice(toRemoveInUser, 1)
+      if(toRemoveInUser > -1) {
+        // TEMP
+        user.subs.splice(toRemoveInUser, 1)
+      }
       if(toRemove > -1) {
         anime.users.splice(toRemove, 1)
         anime.save()
