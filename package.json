@@ -26,6 +26,7 @@
     "socket.io-client": "^2.3.0"
   },
   "devDependencies": {
-    "@types/node": "^14.0.14"
+    "@types/node": "^14.0.14",
+    "eslint": "^7.7.0"
   }
 }
