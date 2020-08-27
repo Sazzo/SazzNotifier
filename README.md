@@ -1,8 +1,9 @@
 <h1 align="center">
   SazzNotifier
 </h1>
-
+<h4 align="center">
 Notifies you on DM when a new episode of your favorite anime comes out on Crunchyroll!
+</h2>
 
 ## How does it work?
 
