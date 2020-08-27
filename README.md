@@ -1,4 +1,7 @@
 <h1 align="center">
+  <img src="https://i.imgur.com/cYbRzN5.png">
+  <br>
+  <br>
   SazzNotifier
 </h1>
 <h4 align="center">
