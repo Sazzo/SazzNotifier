@@ -14,9 +14,7 @@ The bot uses Crunchyroll's RSS feed to get the data, however, we need to know wh
 
 ## Invite
 
-Discord Invite: [Link](https://discord.com/oauth2/authorize/?permissions=1&scope=bot&client_id=745674308537417728)
-<br>
-top.gg (aka Discord Bot List):  Soon:tm:
+Discord Invite: Archived.
 
 ## Author
 **SazzNotifier** © FelipeSazz.
